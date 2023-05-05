@@ -17,10 +17,14 @@ const SignIn = () => {
       });
   };
   return (
-    <div className='sign-in-container'>
-      <form onSubmit={signIn}>
+    <div className='sign-in-container w-full'>
+      <form
+        onSubmit={signIn}
+        className='w-full h-full flex justify-center flex-col px-32'
+      >
         <h1>Log In</h1>
         <input
+          className='p-2 bg-slate-50 border border-sky-500 rounded-lg '
           type='email'
           placeholder='please enter your email'
           value={email}
@@ -28,12 +32,20 @@ const SignIn = () => {
         />
         <br />
         <input
+          className='p-2 bg-slate-50 border border-sky-500 rounded-lg '
           type='password'
           placeholder='enter your password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type='submit'>Log in</button>
+        <div className='flex justify-center py-5'>
+          <button
+            type='submit'
+            className='border border-sky-500 text-sky-500  rounded-full px-7 py-2 hover:bg-sky-500 hover:text-white duration-300'
+          >
+            Log in
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -4,8 +4,7 @@ import SignUp from './components/auth/SignUp';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello Firestore!</h1>
+    <div className='flex justify-center h-screen items-center flex-col w-full'>
       <SignIn />
       <br />
       <SignUp />
